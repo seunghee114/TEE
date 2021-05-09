@@ -110,7 +110,7 @@ int main(int argc, char* argv[])
 		fclose(inputfs);
 		
 		FILE* enckeyfs;
-		enckeyfs = fopen("enckey.txt","r");
+		enckeyfs = fopen(argv[3],"r");
 		char enc = fgetc(enckeyfs);
 		fclose(enckeyfs);
 		op.params[1].value.a = enc;
