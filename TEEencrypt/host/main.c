@@ -72,7 +72,7 @@ int main(int argc, char* argv[])
 		printf("========================Encryption========================\n");
 		FILE* inputfs;
 		inputfs = fopen(argv[2], "r");
-		fscanf(inputfs, "%s", plaintext);
+		fgets(plaintext, 64, inputfs);
 		printf("Plain text : %s\n", plaintext);
 		fclose(inputfs);
 
@@ -104,7 +104,7 @@ int main(int argc, char* argv[])
 		
 		FILE* inputfs;
 		inputfs = fopen(argv[2], "r");
-		fscanf(inputfs, "%s", ciphertext);
+		fgets(ciphertext, 64, inputfs);
 		printf("Cipher text : %s\n", ciphertext);
 		 
 		fclose(inputfs);
