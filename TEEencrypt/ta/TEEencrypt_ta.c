@@ -149,7 +149,7 @@ static TEE_Result dec_value(uint32_t param_types,
 
 	int enc = params[1].value.a;
 	enc = enc -'a'- rootkey;
-	
+	enc += 26;
 	enc = enc %26;
 	key = enc;
 
